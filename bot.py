@@ -3,6 +3,7 @@ import time
 
 from database import *
 from random import randint
+from settings import *
 
 def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
@@ -16,7 +17,7 @@ def on_chat_message(msg):
         else:
             bot.sendMessage(chat_id, '{} eu nao entendi o seu comando'.format(name))
 
-bot = telepot.Bot('410071061:AAGnxJyCQzGO4NHv5joTbJBH_kJiqpInhOc')
+bot = telepot.Bot(TELEGRAM['TOKEN'])
 bot.message_loop(on_chat_message)
 print ('O bot esta funcionando...')
 while 1:

@@ -1,0 +1,3 @@
+TELEGRAM = {
+    "TOKEN": "INSIRA O SEU TOKEN AQUI"
+}
